@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<contentlist name="iPadCampaign1" xml:lang="en">
+    <video>
+        <mime-type>video/quicktime</mime-type>
+        <id>87051</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87051</url>
+        <title>Test filmpje voor iPad app</title>
+        <description>Test filmpje voor iPad app</description>
+        <thumb>http://farm2.staticflickr.com/1206/4727422711_ab66324981_b.jpg</thumb>
+    </video>
+    <whitepaper>
+        <mime-type>application/pdf</mime-type>
+        <id>87052</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87052</url>
+        <title>Test whitepaper voor iPad app</title>
+        <description>Test whitepaper voor iPad app</description>
+        <thumb>http://cambelt.co/180x100/Thumb+Whitepaper?font_size=12</thumb>
+    </whitepaper>
+    <presentation>
+        <mime-type>application/pdf </mime-type>
+        <id>87057</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87057</url>
+        <title>How to get started</title>
+        <description>Commercial</description>
+        <thumb>http://cambelt.co/180x100/Thumb+Presentation?font_size=12</thumb>
+    </presentation>
+    <video>
+        <mime-type>video/quicktime</mime-type>
+        <id>87053</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87051</url>
+        <title>Test filmpje voor iPad app</title>
+        <description>Test filmpje voor iPad app</description>
+        <thumb>http://farm8.staticflickr.com/7190/6908819301_5d2edd0735_b.jpg</thumb>
+    </video>
+    <whitepaper>
+        <mime-type>application/pdf</mime-type>
+        <id>87054</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87052</url>
+        <title>Test whitepaper voor iPad app</title>
+        <description>Test whitepaper voor iPad app</description>
+        <thumb>http://cambelt.co/180x100/Thumb+Whitepaper?font_size=12</thumb>
+    </whitepaper>
+    <presentation>
+        <mime-type>application/pdf </mime-type>
+        <id>87055</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87057</url>
+        <title>How to get started</title>
+        <description>Commercial</description>
+        <thumb>http://cambelt.co/180x100/Thumb+Presentation?font_size=12</thumb>
+    </presentation>
+    <video>
+        <mime-type>video/quicktime</mime-type>
+        <id>87056</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87051</url>
+        <title>Test filmpje voor iPad app</title>
+        <description>Test filmpje voor iPad app</description>
+        <thumb>http://farm8.staticflickr.com/7161/6812820891_f3b907b5a3_b.jpg</thumb>
+    </video>
+    <whitepaper>
+        <mime-type>application/pdf</mime-type>
+        <id>87058</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87052</url>
+        <title>Test whitepaper voor iPad app</title>
+        <description>Test whitepaper voor iPad app</description>
+        <thumb>http://cambelt.co/180x100/Thumb+Whitepaper?font_size=12</thumb>
+    </whitepaper>
+    <presentation>
+        <mime-type>application/pdf </mime-type>
+        <id>87059</id>
+        <url>http://www.creatie.nl/creatie/binary/retrieveFile?instanceid=11&amp;itemid=87057</url>
+        <title>How to get started</title>
+        <description>Commercial</description>
+        <thumb>http://cambelt.co/180x100/Thumb+Presentation?font_size=12</thumb>
+    </presentation>
+</contentlist>
