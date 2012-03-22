@@ -19,13 +19,12 @@
 		5E4B02B8150DFC98006D4C01 /* EGOImageLoadConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B02B2150DFC98006D4C01 /* EGOImageLoadConnection.m */; };
 		5E4B02B9150DFC98006D4C01 /* EGOImageLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B02B4150DFC98006D4C01 /* EGOImageLoader.m */; };
 		5E4B02BA150DFC98006D4C01 /* EGOImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B02B7150DFC98006D4C01 /* EGOImageView.m */; };
-		5E4B02DE150E052F006D4C01 /* campaignContent.xml in Resources */ = {isa = PBXBuildFile; fileRef = 5E4B02DD150E052F006D4C01 /* campaignContent.xml */; };
 		5E4B02E2150E05F7006D4C01 /* EGOCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B02E1150E05F7006D4C01 /* EGOCache.m */; };
 		5E4B02E4150E151C006D4C01 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4B02E3150E151C006D4C01 /* QuartzCore.framework */; };
 		5E4B02EE150E3602006D4C01 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4B02ED150E3601006D4C01 /* GradientView.m */; };
 		5E5A6CA515123679000F5C06 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5A6CA415123679000F5C06 /* MediaPlayer.framework */; };
-		5E5A6CAC151239DA000F5C06 /* sample.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB4951512321700734C26 /* sample.m4v */; };
 		5E5A6CAE15123D69000F5C06 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E5A6CAD15123D69000F5C06 /* QuickLook.framework */; };
+		5ED24C681519EA5300A5E521 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ED24C671519E99500A5E521 /* MBProgressHUD.m */; };
 		5EDAB3DB1510D0A500734C26 /* ScrollViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB3DA1510D0A500734C26 /* ScrollViewCell.xib */; };
 		5EDAB3F11510D7A500734C26 /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB3DD1510D7A500734C26 /* appIcon.png */; };
 		5EDAB3F21510D7A500734C26 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB3DE1510D7A500734C26 /* appIcon@2x.png */; };
@@ -51,8 +50,9 @@
 		5EDAB46B15120A8600734C26 /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAB46A151209CC00734C26 /* ReflectionView.m */; };
 		5EDAB4741512157600734C26 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EDAB4721512157600734C26 /* AboutViewController.m */; };
 		5EDAB4751512157600734C26 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB4731512157600734C26 /* AboutViewController.xib */; };
-		5EDAB4971512322600734C26 /* Aandeslagmet_bronnen_A4_FC_LR.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB4961512322600734C26 /* Aandeslagmet_bronnen_A4_FC_LR.pdf */; };
-		5EDAB4991512323B00734C26 /* Travelpack Klantpresentatie 20022012.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5EDAB4981512323B00734C26 /* Travelpack Klantpresentatie 20022012.pdf */; };
+		5EF6CA32151B752100C2BCBB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6CA30151B752100C2BCBB /* WebViewController.m */; };
+		5EF6CA33151B752100C2BCBB /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF6CA31151B752100C2BCBB /* WebViewController.xib */; };
+		5EF6CA54151B7E7800C2BCBB /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6CA53151B7E7800C2BCBB /* HitTestView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +78,6 @@
 		5E4B02B6150DFC98006D4C01 /* EGOImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOImageView.h; sourceTree = "<group>"; };
 		5E4B02B7150DFC98006D4C01 /* EGOImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOImageView.m; sourceTree = "<group>"; };
 		5E4B02DC150E0338006D4C01 /* defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = defines.h; sourceTree = "<group>"; };
-		5E4B02DD150E052F006D4C01 /* campaignContent.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = campaignContent.xml; sourceTree = "<group>"; };
 		5E4B02E0150E05F7006D4C01 /* EGOCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOCache.h; sourceTree = "<group>"; };
 		5E4B02E1150E05F7006D4C01 /* EGOCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGOCache.m; sourceTree = "<group>"; };
 		5E4B02E3150E151C006D4C01 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -86,6 +85,8 @@
 		5E4B02ED150E3601006D4C01 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
 		5E5A6CA415123679000F5C06 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		5E5A6CAD15123D69000F5C06 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		5ED24C661519E99500A5E521 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		5ED24C671519E99500A5E521 /* MBProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		5EDAB3DA1510D0A500734C26 /* ScrollViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScrollViewCell.xib; path = Resources/NIBs/ScrollViewCell.xib; sourceTree = "<group>"; };
 		5EDAB3DD1510D7A500734C26 /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 		5EDAB3DE1510D7A500734C26 /* appIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@2x.png"; sourceTree = "<group>"; };
@@ -113,9 +114,11 @@
 		5EDAB4711512157600734C26 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		5EDAB4721512157600734C26 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		5EDAB4731512157600734C26 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
-		5EDAB4951512321700734C26 /* sample.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.m4v; sourceTree = "<group>"; };
-		5EDAB4961512322600734C26 /* Aandeslagmet_bronnen_A4_FC_LR.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Aandeslagmet_bronnen_A4_FC_LR.pdf; sourceTree = "<group>"; };
-		5EDAB4981512323B00734C26 /* Travelpack Klantpresentatie 20022012.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Travelpack Klantpresentatie 20022012.pdf"; sourceTree = "<group>"; };
+		5EF6CA2F151B752100C2BCBB /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5EF6CA30151B752100C2BCBB /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5EF6CA31151B752100C2BCBB /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		5EF6CA52151B7E7800C2BCBB /* HitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
+		5EF6CA53151B7E7800C2BCBB /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,7 @@
 		5E4B028F150DEF44006D4C01 /* Kluwer-Navigator */ = {
 			isa = PBXGroup;
 			children = (
+				5E4B02DC150E0338006D4C01 /* defines.h */,
 				5E4B0298150DEF44006D4C01 /* AppDelegate.h */,
 				5E4B0299150DEF44006D4C01 /* AppDelegate.m */,
 				5E4B02AC150DFA76006D4C01 /* Controllers */,
@@ -177,7 +181,6 @@
 				5EDAB46A151209CC00734C26 /* ReflectionView.m */,
 				5E4B02AD150DFA90006D4C01 /* Resources */,
 				5E4B0290150DEF44006D4C01 /* Supporting Files */,
-				5E4B02DC150E0338006D4C01 /* defines.h */,
 			);
 			path = "Kluwer-Navigator";
 			sourceTree = "<group>";
@@ -211,6 +214,11 @@
 				5E4B02ED150E3601006D4C01 /* GradientView.m */,
 				5EDAB4711512157600734C26 /* AboutViewController.h */,
 				5EDAB4721512157600734C26 /* AboutViewController.m */,
+				5EF6CA2F151B752100C2BCBB /* WebViewController.h */,
+				5EF6CA30151B752100C2BCBB /* WebViewController.m */,
+				5EF6CA31151B752100C2BCBB /* WebViewController.xib */,
+				5EF6CA52151B7E7800C2BCBB /* HitTestView.h */,
+				5EF6CA53151B7E7800C2BCBB /* HitTestView.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -218,7 +226,6 @@
 		5E4B02AD150DFA90006D4C01 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5EDAB494151231FB00734C26 /* temp */,
 				5EDAB3DC1510D7A500734C26 /* AppIcons */,
 				5EDAB3E61510D7A500734C26 /* Images */,
 				5E4B02AE150DFA98006D4C01 /* NIBs */,
@@ -242,6 +249,8 @@
 				5E4B02DF150E05F7006D4C01 /* EGOCache */,
 				5E4B02B0150DFC98006D4C01 /* EGOImageLoader */,
 				5E4B02B5150DFC98006D4C01 /* EGOImageView */,
+				5ED24C661519E99500A5E521 /* MBProgressHUD.h */,
+				5ED24C671519E99500A5E521 /* MBProgressHUD.m */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -312,17 +321,6 @@
 			path = Resources/Images;
 			sourceTree = "<group>";
 		};
-		5EDAB494151231FB00734C26 /* temp */ = {
-			isa = PBXGroup;
-			children = (
-				5EDAB4951512321700734C26 /* sample.m4v */,
-				5EDAB4981512323B00734C26 /* Travelpack Klantpresentatie 20022012.pdf */,
-				5EDAB4961512322600734C26 /* Aandeslagmet_bronnen_A4_FC_LR.pdf */,
-				5E4B02DD150E052F006D4C01 /* campaignContent.xml */,
-			);
-			name = temp;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,7 +374,6 @@
 			files = (
 				5E4B0294150DEF44006D4C01 /* InfoPlist.strings in Resources */,
 				5E4B02A0150DEF44006D4C01 /* OverviewViewController.xib in Resources */,
-				5E4B02DE150E052F006D4C01 /* campaignContent.xml in Resources */,
 				5EDAB3DB1510D0A500734C26 /* ScrollViewCell.xib in Resources */,
 				5EDAB3F11510D7A500734C26 /* appIcon.png in Resources */,
 				5EDAB3F21510D7A500734C26 /* appIcon@2x.png in Resources */,
@@ -400,9 +397,7 @@
 				5EDAB40A1510E01C00734C26 /* shadow-vertical-left.png in Resources */,
 				5EDAB40B1510E01C00734C26 /* Shadow-vertical-right.png in Resources */,
 				5EDAB4751512157600734C26 /* AboutViewController.xib in Resources */,
-				5EDAB4971512322600734C26 /* Aandeslagmet_bronnen_A4_FC_LR.pdf in Resources */,
-				5E5A6CAC151239DA000F5C06 /* sample.m4v in Resources */,
-				5EDAB4991512323B00734C26 /* Travelpack Klantpresentatie 20022012.pdf in Resources */,
+				5EF6CA33151B752100C2BCBB /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,7 +411,6 @@
 				5E4B0296150DEF44006D4C01 /* main.m in Sources */,
 				5E4B029A150DEF44006D4C01 /* AppDelegate.m in Sources */,
 				5E4B029D150DEF44006D4C01 /* OverviewViewController.m in Sources */,
-				5EDAB46B15120A8600734C26 /* ReflectionView.m in Sources */,
 				5E4B02A8150DF71B006D4C01 /* ScrollViewCell.m in Sources */,
 				5E4B02B8150DFC98006D4C01 /* EGOImageLoadConnection.m in Sources */,
 				5E4B02B9150DFC98006D4C01 /* EGOImageLoader.m in Sources */,
@@ -424,6 +418,10 @@
 				5E4B02E2150E05F7006D4C01 /* EGOCache.m in Sources */,
 				5E4B02EE150E3602006D4C01 /* GradientView.m in Sources */,
 				5EDAB4741512157600734C26 /* AboutViewController.m in Sources */,
+				5ED24C681519EA5300A5E521 /* MBProgressHUD.m in Sources */,
+				5EDAB46B15120A8600734C26 /* ReflectionView.m in Sources */,
+				5EF6CA32151B752100C2BCBB /* WebViewController.m in Sources */,
+				5EF6CA54151B7E7800C2BCBB /* HitTestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

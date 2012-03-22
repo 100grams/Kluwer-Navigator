@@ -32,6 +32,8 @@
 
 @property (nonatomic, retain) NSDictionary *mediaItem;
 
+// when set to YES the cell shows a spinner/loading 
+@property (nonatomic, assign) BOOL loading; 
 
 @end
 

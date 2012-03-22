@@ -11,7 +11,10 @@
 #import <QuickLook/QuickLook.h>
 
 
-
+enum ConnectionState {
+    ConnectionStateFetchContent,
+    ConnectionStateFetchMediaUrl
+};
 
 @interface OverviewViewController : UIViewController <NSURLConnectionDataDelegate, NSXMLParserDelegate, ScrollViewCellDelegate, QLPreviewControllerDataSource, QLPreviewControllerDelegate>
 {
@@ -20,8 +23,9 @@
     NSString *_currentElementName;
     
     NSMutableArray *_mediaItems;
+    ScrollViewCell *loadingCell;
     
-    NSDictionary *previewedMediaItem;
+    NSInteger connectionState;
 
 }
 @property (retain, nonatomic) IBOutlet UIView *backgroundView;
@@ -45,6 +49,8 @@
 @property (retain, nonatomic) IBOutlet UILabel *bottomLabelLandscape;
 
 @property (nonatomic, retain) NSArray *mediaItems;
+@property (nonatomic, retain) NSDictionary *previewedMediaItem;
+
 
 @property (nonatomic, assign) UIInterfaceOrientation viewOrientation;
 
@@ -52,10 +58,16 @@
 @property (retain, nonatomic) IBOutlet UIView *landscapeView;
 
 
+// Fetching content from the server
+- (void) getContentFeed;
+
+// Archiving/Unarchiving content
 - (void) archiveMediaItems;
 - (void) unarchiveMediaItems;
 
-- (void) setBackgrounds;
+// preview Content 
+- (void) previewMediaItem : (NSDictionary*) mediaItem;
+
 
 - (IBAction)showAbout:(id)sender;
 
@@ -70,5 +82,7 @@
 
 - (void) replaceCellAtIndex:(NSInteger) index withMediaItem : (NSDictionary*) item;
 - (void) insertCellAtIndex:(NSInteger) index withMediaItem : (NSDictionary*) item;
+
+- (void) setBackgrounds;
 
 @end

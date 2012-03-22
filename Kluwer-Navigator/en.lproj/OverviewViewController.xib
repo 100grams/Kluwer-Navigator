@@ -15,7 +15,6 @@
 			<string>IBProxyObject</string>
 			<string>IBUILabel</string>
 			<string>IBUIImageView</string>
-			<string>IBUIActivityIndicatorView</string>
 			<string>IBUITextView</string>
 			<string>IBUIScrollView</string>
 			<string>IBUIButton</string>
@@ -179,25 +178,10 @@
 					<object class="IBUIScrollView" id="770786077">
 						<reference key="NSNextResponder" ref="969478599"/>
 						<int key="NSvFlags">292</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIActivityIndicatorView" id="1011953960">
-								<reference key="NSNextResponder" ref="770786077"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{50, 220}, {37, 37}}</string>
-								<reference key="NSSuperview" ref="770786077"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="203326624"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-								<int key="IBUIStyle">0</int>
-							</object>
-						</array>
 						<string key="NSFrame">{{0, 174}, {768, 303}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1011953960"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -210,25 +194,10 @@
 					<object class="IBUIScrollView" id="17392729">
 						<reference key="NSNextResponder" ref="969478599"/>
 						<int key="NSvFlags">292</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIActivityIndicatorView" id="920190711">
-								<reference key="NSNextResponder" ref="17392729"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{50, -297}, {37, 37}}</string>
-								<reference key="NSSuperview" ref="17392729"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="737222049"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-								<int key="IBUIStyle">0</int>
-							</object>
-						</array>
 						<string key="NSFrame">{{0, 536}, {768, 208}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="920190711"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -241,24 +210,10 @@
 					<object class="IBUIScrollView" id="781528342">
 						<reference key="NSNextResponder" ref="969478599"/>
 						<int key="NSvFlags">268</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIActivityIndicatorView" id="540920722">
-								<reference key="NSNextResponder" ref="781528342"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{50, 36}, {37, 37}}</string>
-								<reference key="NSSuperview" ref="781528342"/>
-								<reference key="NSWindow"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-								<int key="IBUIStyle">0</int>
-							</object>
-						</array>
 						<string key="NSFrame">{{0, 796}, {768, 208}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="540920722"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -549,25 +504,10 @@
 					<object class="IBUIScrollView" id="447016924">
 						<reference key="NSNextResponder" ref="863306324"/>
 						<int key="NSvFlags">292</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIActivityIndicatorView" id="676549607">
-								<reference key="NSNextResponder" ref="447016924"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{50, 247}, {37, 37}}</string>
-								<reference key="NSSuperview" ref="447016924"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="359324027"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-								<int key="IBUIStyle">0</int>
-							</object>
-						</array>
 						<string key="NSFrame">{{33, 190}, {450, 558}}</string>
 						<reference key="NSSuperview" ref="863306324"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="676549607"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -580,25 +520,10 @@
 					<object class="IBUIScrollView" id="505072855">
 						<reference key="NSNextResponder" ref="863306324"/>
 						<int key="NSvFlags">292</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIActivityIndicatorView" id="443334804">
-								<reference key="NSNextResponder" ref="505072855"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{50, 63}, {37, 37}}</string>
-								<reference key="NSSuperview" ref="505072855"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="985921933"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-								<int key="IBUIStyle">0</int>
-							</object>
-						</array>
 						<string key="NSFrame">{{507, 190}, {230, 558}}</string>
 						<reference key="NSSuperview" ref="863306324"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="443334804"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -611,25 +536,10 @@
 					<object class="IBUIScrollView" id="601185780">
 						<reference key="NSNextResponder" ref="863306324"/>
 						<int key="NSvFlags">292</int>
-						<array class="NSMutableArray" key="NSSubviews">
-							<object class="IBUIActivityIndicatorView" id="551392472">
-								<reference key="NSNextResponder" ref="601185780"/>
-								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{50, 63}, {37, 37}}</string>
-								<reference key="NSSuperview" ref="601185780"/>
-								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="220998231"/>
-								<bool key="IBUIOpaque">NO</bool>
-								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-								<bool key="IBUIHidesWhenStopped">NO</bool>
-								<bool key="IBUIAnimating">YES</bool>
-								<int key="IBUIStyle">0</int>
-							</object>
-						</array>
 						<string key="NSFrame">{{760, 190}, {230, 558}}</string>
 						<reference key="NSSuperview" ref="863306324"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="551392472"/>
+						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -1026,72 +936,37 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">5</int>
 						<reference key="object" ref="447016924"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="676549607"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="863306324"/>
 						<string key="objectName">TOP_Scroll View</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">8</int>
-						<reference key="object" ref="676549607"/>
-						<reference key="parent" ref="447016924"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">15</int>
 						<reference key="object" ref="505072855"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="443334804"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="863306324"/>
 						<string key="objectName">MID_Scroll View</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">16</int>
-						<reference key="object" ref="443334804"/>
-						<reference key="parent" ref="505072855"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">10</int>
 						<reference key="object" ref="601185780"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="551392472"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="863306324"/>
 						<string key="objectName">BOT_Scroll View</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">11</int>
-						<reference key="object" ref="551392472"/>
-						<reference key="parent" ref="601185780"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">41</int>
 						<reference key="object" ref="770786077"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="1011953960"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="969478599"/>
 						<string key="objectName">TOP_Scroll View</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">42</int>
 						<reference key="object" ref="17392729"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="920190711"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="969478599"/>
 						<string key="objectName">MID_Scroll View</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">48</int>
-						<reference key="object" ref="920190711"/>
-						<reference key="parent" ref="17392729"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">49</int>
-						<reference key="object" ref="1011953960"/>
-						<reference key="parent" ref="770786077"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">70</int>
@@ -1119,16 +994,9 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">43</int>
 						<reference key="object" ref="781528342"/>
-						<array class="NSMutableArray" key="children">
-							<reference ref="540920722"/>
-						</array>
+						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="969478599"/>
 						<string key="objectName">BOT_Scroll View</string>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">47</int>
-						<reference key="object" ref="540920722"/>
-						<reference key="parent" ref="781528342"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">84</int>
@@ -1282,11 +1150,9 @@
 				<string key="107.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="108.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="109.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="11.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="110.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="111.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="15.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="19.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="22.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -1297,14 +1163,10 @@
 				<string key="42.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="43.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="47.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="48.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="49.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="70.CustomClassName">GradientView</string>
 				<string key="70.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="72.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="84.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="86.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="87.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

@@ -10,6 +10,11 @@
 #define Kluwer_Navigator_defines_h
 
 
+// URLs
+
+#define kCreatieUrl @"http://www.creatie.nl/creatie/xml/ipad/files.do"
+
+
 //debug 
 #define DBG_LEVEL DEBUG_LEVEL_VERBOSE
 

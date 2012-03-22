@@ -7,6 +7,8 @@
 //
 
 #import "ScrollViewCell.h"
+#import "MBProgressHUD.h"
+
 
 @implementation ScrollViewCell
 @synthesize titleLabel;
@@ -15,7 +17,7 @@
 @synthesize imageView;
 @synthesize delegate;
 @synthesize mediaItem;
-
+@synthesize loading;
 
 
 + (ScrollViewCell*) cellWithMediaItem:(NSDictionary*)item
@@ -63,6 +65,17 @@
     [super dealloc];
 }
 
+
+- (void) setLoading:(BOOL)loadn
+{
+    if (loadn) {
+        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:reflectionView animated:YES];
+        hud.labelText = @"Laden";
+    }
+    else{
+        [MBProgressHUD hideHUDForView:reflectionView animated:YES];
+    }
+}
 
 #pragma mark - EGOImageViewDelegate
 
