@@ -241,26 +241,49 @@
 {
     // if item already exists - update it
 
-    NSInteger index = [_mediaItems indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+    NSDictionary *existingItem = [[_mediaItems objectsPassingTest:^BOOL(id obj, BOOL *stop) {
         return *stop = [[obj valueForKey:@"id"] isEqualToString:[item valueForKey:@"id"]];
-    }];
-    if (index != NSNotFound) {
-        NSMutableDictionary *revisedItem = [[[_mediaItems objectAtIndex:index] mutableCopy] autorelease];
-        [revisedItem addEntriesFromDictionary:item];
-        [_mediaItems replaceObjectAtIndex:index withObject:revisedItem];
-        
-        [self replaceCellAtIndex:index withMediaItem:revisedItem];
+    }] anyObject];
+    
+    if (existingItem) {
+        NSMutableDictionary *revisedItem = [[existingItem mutableCopy] autorelease];
+        [revisedItem addEntriesFromDictionary:item];        
+
+        [_mediaItems removeObject:existingItem];
+        [_mediaItems addObject:revisedItem];
+
+        [_updatedItems addObject:revisedItem];
 
     }
     else{
         // item is new - add it
         [_mediaItems addObject:item];
-        [self addNewCellWithMediaItem:item];
+        [_updatedItems addObject:item];
     }
 
 
 }
 
+
+- (void) populateScrollViews
+{
+    NSArray *sortedVideos = [self sortedMediaItemsOfType:@"video"];
+    [sortedVideos enumerateObjectsUsingBlock:^(NSDictionary *item, NSUInteger idx, BOOL *stop) {
+        [self addNewCellWithMediaItem:item];
+    }];
+    
+    NSArray *sortedWhitepapers = [self sortedMediaItemsOfType:@"whitepaper"];
+    [sortedWhitepapers enumerateObjectsUsingBlock:^(NSDictionary *item, NSUInteger idx, BOOL *stop) {
+        [self addNewCellWithMediaItem:item];
+    }];
+
+    NSArray *sortedPresentations = [self sortedMediaItemsOfType:@"presentation"];
+    [sortedPresentations enumerateObjectsUsingBlock:^(NSDictionary *item, NSUInteger idx, BOOL *stop) {
+        [self addNewCellWithMediaItem:item];
+    }];
+
+
+}
 
 - (void) insertCellAtIndex:(NSInteger) index withMediaItem : (NSDictionary*) item;
 {
@@ -273,7 +296,6 @@
 {
     NSString *type = [item valueForKey:@"filetype"];
 
-    // handle portrait
     UIScrollView *scrollViewPortrait = [self scrollViewForMediaType:type interfaceOrientation:UIInterfaceOrientationPortrait];
     UIScrollView *scrollViewLandscape = [self scrollViewForMediaType:type interfaceOrientation:UIInterfaceOrientationLandscapeLeft];
     
@@ -289,6 +311,54 @@
     
 }
 
+
+- (void) removeCellWithMediaItem : (NSDictionary*) item
+{
+    NSString *type = [item valueForKey:@"filetype"];
+    UIScrollView *scrollViewPortrait = [self scrollViewForMediaType:type interfaceOrientation:UIInterfaceOrientationPortrait];
+    UIScrollView *scrollViewLandscape = [self scrollViewForMediaType:type interfaceOrientation:UIInterfaceOrientationLandscapeLeft];
+
+    NSInteger index = [self displayIndexOfMediaItem:item];
+
+    if ([[scrollViewPortrait subviews] count] > index) {
+        
+        ScrollViewCell *cellPortrait = [[scrollViewPortrait subviews] objectAtIndex:index];
+        ScrollViewCell *cellLandscape = [[scrollViewLandscape subviews] objectAtIndex:index];
+
+        [UIView animateWithDuration:0.25 animations:^{
+            cellPortrait.alpha = 0.0;
+            cellLandscape.alpha = 0.0;
+            for (int i=index+1; i<[[scrollViewPortrait subviews] count]; i++) {
+                UIView *view = [[scrollViewPortrait subviews] objectAtIndex:i];
+                CGRect frame = view.frame;
+                frame.origin.x -= cellPortrait.frame.size.width;
+                view.frame = frame;
+                
+                view = [[scrollViewLandscape subviews] objectAtIndex:i];
+                frame = view.frame;
+                frame.origin.y -= cellLandscape.frame.size.height;
+                view.frame = frame;
+            }            
+        } completion:^(BOOL finished) {
+            CGSize size = scrollViewPortrait.contentSize;
+            size.width -= cellPortrait.frame.size.width;
+            scrollViewPortrait.contentSize = size; 
+
+            size = scrollViewLandscape.contentSize;
+            size.height -= cellLandscape.frame.size.height;
+            scrollViewLandscape.contentSize = size; 
+
+            [cellPortrait removeFromSuperview];
+            [cellLandscape removeFromSuperview];
+
+        }];
+
+    }
+    
+    DLog(DEBUG_LEVEL_VERBOSE, @"REMOVED %@ scroll view item at index %d: %@", [item valueForKey:@"filetype"], index, item);                
+
+
+}
 
 
 - (void) addNewCellWithMediaItem:(NSDictionary*)item 
@@ -400,18 +470,61 @@
     NSFileManager *fm = [NSFileManager defaultManager];
     if([fm fileExistsAtPath:archiveName]){
         NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithFile:archiveName];
-        _mediaItems = [[NSMutableArray alloc] initWithCapacity:[array count]];
+        _mediaItems = [[NSMutableSet alloc] initWithCapacity:[array count]];
         [_mediaItems addObjectsFromArray:array];
     }
 #endif
     else{
-        _mediaItems = [[NSMutableArray alloc] initWithCapacity:32];
+        _mediaItems = [[NSMutableSet alloc] initWithCapacity:32];
     }
     
 }
 
 
 
+- (void) purgeOldMediaItems
+{
+    // get rid of any media items which weren't updated
+    NSMutableSet *allItems = [[[NSMutableSet alloc] initWithCapacity:[_mediaItems count]] autorelease];
+    [allItems unionSet:_mediaItems];
+    [allItems minusSet:_updatedItems];
+    
+    NSError *error = nil;
+    for(NSDictionary *item in allItems){
+        NSString *fileName = [item valueForKey:@"media_file"];
+        if(![[NSFileManager defaultManager] removeItemAtPath:fileName error:&error]){
+            DLog(DEBUG_LEVEL_ERROR, @"ERROR removing file %@", fileName);
+        }
+
+        [self removeCellWithMediaItem:item];
+        [_mediaItems removeObject:item];
+    }
+    
+    DLog(DEBUG_LEVEL_VERBOSE, @"Removed %d old items", [allItems count]);
+
+
+}
+                                
+
+- (NSArray*) sortedMediaItemsOfType:(NSString*)type
+{
+    NSSet *itemsOfType = [_mediaItems objectsPassingTest:^BOOL(id obj, BOOL *stop) {
+        return [[obj valueForKey:@"filetype"] isEqualToString:type];
+    }];
+    
+    return [itemsOfType sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:NO]]];
+}
+
+- (NSInteger) displayIndexOfMediaItem:(NSDictionary*)item
+{
+    NSArray *itemsOfType = [self sortedMediaItemsOfType:[item valueForKey:@"filetype"]];
+
+   return [itemsOfType indexOfObjectPassingTest:^BOOL(id obj, NSUInteger idx, BOOL *stop) {
+        return *stop = [[obj valueForKey:@"id"] isEqualToString:[item valueForKey:@"id"]];
+    }];
+
+}
+                                
 
 #pragma mark - NSURLConnectionDataDelegate
 
@@ -433,6 +546,10 @@
     switch (connectionState) {
         case ConnectionStateFetchContent:
         {
+            [_updatedItems release];
+            _updatedItems = [[NSMutableSet alloc] initWithCapacity:[_mediaItems count]];
+            
+            // update media items
             NSXMLParser *parser = [[NSXMLParser alloc] initWithData:_data];
             parser.delegate = self;
             if(![parser parse]){
@@ -440,6 +557,14 @@
                 [parser release];
                 [_data release];
             }
+
+            DLog(DEBUG_LEVEL_VERBOSE, @"Number of media items before cleanup: %d", [_mediaItems count]);
+            [self purgeOldMediaItems];
+            
+            DLog(DEBUG_LEVEL_VERBOSE, @"Finished updating content. Current number of media items: %d", [_mediaItems count]);
+
+            [self populateScrollViews];
+            
         }
             
             break;
@@ -532,28 +657,45 @@
 
     self.previewedMediaItem = cell.mediaItem;
 
-    if ([[previewedMediaItem valueForKey:@"filetype"] isEqualToString:@"video"] || [previewedMediaItem valueForKey:@"media_file"]) 
+    if ([[previewedMediaItem valueForKey:@"filetype"] isEqualToString:@"video"] || [self isMediaItemCached:previewedMediaItem]) 
     {
         [self previewMediaItem : previewedMediaItem];        
     }    
     else if(!loadingCell){
-        [cell setLoading:YES];
-        loadingCell = cell;
-        
-		NSString* cachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-        NSString *fileName = [cachesDirectory stringByAppendingPathComponent:[previewedMediaItem valueForKey:@"filetype"]];
-        fileName = [fileName stringByAppendingPathComponent:[previewedMediaItem valueForKey:@"id"]];
-        NSString *mimetype = [previewedMediaItem valueForKey:@"mimetype"];
-        NSString *extension = [mimetype substringFromIndex:[mimetype rangeOfString:@"/"].location + 1]; 
-        fileName = [fileName stringByAppendingPathExtension:extension];
-        [previewedMediaItem setValue:fileName  forKey:@"media_file"];
-        
-        connectionState = ConnectionStateFetchMediaUrl;
-        NSURL *url = [NSURL URLWithString:[cell.mediaItem valueForKey:@"url"]];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
-        NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
-        [connection start];
+        [self cacheNewContentForCell:cell];
     }
+}
+
+
+- (BOOL) isMediaItemCached:(NSDictionary*)item
+{
+    NSString *fileName = [previewedMediaItem valueForKey:@"media_file"];
+    if (fileName) {
+        return [[NSFileManager defaultManager] fileExistsAtPath:fileName];
+    }
+    return NO;
+}
+
+
+- (void) cacheNewContentForCell:(ScrollViewCell*)cell
+{
+    [cell setLoading:YES];
+    loadingCell = cell;
+    
+    NSString* cachesDirectory = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *fileName = [cachesDirectory stringByAppendingPathComponent:[previewedMediaItem valueForKey:@"filetype"]];
+    fileName = [fileName stringByAppendingPathComponent:[previewedMediaItem valueForKey:@"id"]];
+    NSString *mimetype = [previewedMediaItem valueForKey:@"mimetype"];
+    NSString *extension = [mimetype substringFromIndex:[mimetype rangeOfString:@"/"].location + 1]; 
+    fileName = [fileName stringByAppendingPathExtension:extension];
+    [previewedMediaItem setValue:fileName  forKey:@"media_file"];
+    
+    connectionState = ConnectionStateFetchMediaUrl;
+    NSURL *url = [NSURL URLWithString:[cell.mediaItem valueForKey:@"url"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
+    [connection start];
+
 }
 
 

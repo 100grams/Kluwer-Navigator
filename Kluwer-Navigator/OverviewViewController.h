@@ -22,7 +22,8 @@ enum ConnectionState {
     NSDictionary *_currentMediaItem;
     NSString *_currentElementName;
     
-    NSMutableArray *_mediaItems;
+    NSMutableSet *_mediaItems;
+    NSMutableSet *_updatedItems;
     ScrollViewCell *loadingCell;
     
     NSInteger connectionState;
@@ -48,7 +49,7 @@ enum ConnectionState {
 @property (retain, nonatomic) IBOutlet UILabel *midLabelLandscape;
 @property (retain, nonatomic) IBOutlet UILabel *bottomLabelLandscape;
 
-@property (nonatomic, retain) NSArray *mediaItems;
+@property (nonatomic, retain) NSSet *mediaItems;
 @property (nonatomic, retain) NSDictionary *previewedMediaItem;
 
 
@@ -67,6 +68,12 @@ enum ConnectionState {
 
 // preview Content 
 - (void) previewMediaItem : (NSDictionary*) mediaItem;
+- (void) cacheNewContentForCell:(ScrollViewCell*)cell;
+
+// sorting and finding content
+- (NSArray*) sortedMediaItemsOfType:(NSString*)type;
+- (NSInteger) displayIndexOfMediaItem:(NSDictionary*)item;
+- (BOOL) isMediaItemCached:(NSDictionary*)item;
 
 
 - (IBAction)showAbout:(id)sender;
@@ -82,6 +89,7 @@ enum ConnectionState {
 
 - (void) replaceCellAtIndex:(NSInteger) index withMediaItem : (NSDictionary*) item;
 - (void) insertCellAtIndex:(NSInteger) index withMediaItem : (NSDictionary*) item;
+- (void) removeCellWithMediaItem : (NSDictionary*) item;
 
 - (void) setBackgrounds;
 
