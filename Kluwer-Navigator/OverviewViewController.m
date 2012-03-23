@@ -200,7 +200,7 @@
 
 - (void) setViewOrientation:(UIInterfaceOrientation)orientation
 {
-    if (viewOrientation == orientation) {
+    if (viewOrientation == orientation || orientation == UIDeviceOrientationUnknown) {
         return;
     }
     
