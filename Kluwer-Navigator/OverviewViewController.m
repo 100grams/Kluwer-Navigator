@@ -369,8 +369,8 @@
     
     ScrollViewCell *cell = [ScrollViewCell cellWithMediaItem:item];
     CGRect frame = cell.frame;
-    frame.origin = CGPointMake(scrollViewPortrait.contentSize.width, 0);
     frame.size = [self cellSizeForMediaType:type];
+    frame.origin = CGPointMake(scrollViewPortrait.contentSize.width, (scrollViewPortrait.frame.size.height-frame.size.height)/2);
     cell.frame = frame;
     [scrollViewPortrait setContentSize:CGSizeMake(scrollViewPortrait.contentSize.width + cell.frame.size.width, scrollViewPortrait.bounds.size.height)];
     [scrollViewPortrait addSubview:cell];
@@ -418,7 +418,7 @@
 - (CGSize) cellSizeForMediaType:(NSString*)type
 {
     if ([type isEqualToString:@"video"]) {
-        return CGSizeMake(450, 303);
+        return CGSizeMake(450, 290);
     }
     else{
         return CGSizeMake(230, 208);

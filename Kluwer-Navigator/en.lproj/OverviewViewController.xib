@@ -178,10 +178,9 @@
 					<object class="IBUIScrollView" id="770786077">
 						<reference key="NSNextResponder" ref="969478599"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 174}, {768, 303}}</string>
+						<string key="NSFrame">{{0, 183}, {768, 294}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -194,10 +193,9 @@
 					<object class="IBUIScrollView" id="17392729">
 						<reference key="NSNextResponder" ref="969478599"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{0, 536}, {768, 208}}</string>
+						<string key="NSFrame">{{0, 526}, {768, 208}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -210,10 +208,9 @@
 					<object class="IBUIScrollView" id="781528342">
 						<reference key="NSNextResponder" ref="969478599"/>
 						<int key="NSvFlags">268</int>
-						<string key="NSFrame">{{0, 796}, {768, 208}}</string>
+						<string key="NSFrame">{{0, 789}, {768, 208}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -396,7 +393,7 @@
 								<reference key="IBUIImage" ref="316547521"/>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 487}, {768, 44}}</string>
+						<string key="NSFrame">{{0, 477}, {768, 44}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="609197735"/>
@@ -477,7 +474,7 @@
 								<reference key="IBUIImage" ref="316547521"/>
 							</object>
 						</array>
-						<string key="NSFrame">{{0, 751}, {768, 44}}</string>
+						<string key="NSFrame">{{0, 741}, {768, 44}}</string>
 						<reference key="NSSuperview" ref="969478599"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="944205852"/>
@@ -507,7 +504,6 @@
 						<string key="NSFrame">{{33, 190}, {450, 558}}</string>
 						<reference key="NSSuperview" ref="863306324"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -523,7 +519,6 @@
 						<string key="NSFrame">{{507, 190}, {230, 558}}</string>
 						<reference key="NSSuperview" ref="863306324"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
@@ -539,7 +534,6 @@
 						<string key="NSFrame">{{760, 190}, {230, 558}}</string>
 						<reference key="NSSuperview" ref="863306324"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<reference key="IBUIBackgroundColor" ref="157645577"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
