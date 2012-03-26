@@ -15,7 +15,25 @@
 #import "WebViewController.h"
 
 @implementation OverviewViewController
+@synthesize dot1;
+@synthesize dot2;
+@synthesize dot3;
+@synthesize dot4;
+@synthesize dot5;
+@synthesize dot6;
+@synthesize dot7;
+@synthesize dot8;
+@synthesize dot9;
+@synthesize dot10;
+@synthesize dot11;
+@synthesize dot12;
+@synthesize dot13;
+@synthesize dot14;
+@synthesize dotsContainer;
+@synthesize loadingOverlayPortrait;
+@synthesize loadingOverlayLandscape;
 @synthesize backgroundView;
+@synthesize headerView;
 @synthesize bottomLabelContainer;
 @synthesize topLabelContainer;
 @synthesize midLabelContainer;
@@ -62,6 +80,9 @@
     [midScrollViewPortrait setContentInset:UIEdgeInsetsMake(0, 20, 0, 0)];
     [bottomScrollViewPortrait setContentInset:UIEdgeInsetsMake(0, 20, 0, 0)];
     
+    isLoading = YES;
+    dotIndex = 1;
+    [self startLoadingAnimation];
 }
 
 - (void) setBackgrounds
@@ -114,6 +135,24 @@
     [self setLabelsContainerLandscape:nil];
     self.previewedMediaItem = nil;
     
+    [self setLoadingOverlayLandscape:nil];
+    [self setDot1:nil];
+    [self setDot2:nil];
+    [self setDot3:nil];
+    [self setDot4:nil];
+    [self setDot5:nil];
+    [self setDot6:nil];
+    [self setDot7:nil];
+    [self setDot8:nil];
+    [self setDot9:nil];
+    [self setDot10:nil];
+    [self setDot11:nil];
+    [self setDot12:nil];
+    [self setDot13:nil];
+    [self setDot14:nil];
+    [self setHeaderView:nil];
+    [self setDotsContainer:nil];
+    [self setLoadingOverlayPortrait:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 
@@ -178,6 +217,24 @@
     [topLabelContainer release];
     [midLabelContainer release];
     [labelsContainerLandscape release];
+    [loadingOverlayLandscape release];
+    [dot1 release];
+    [dot2 release];
+    [dot3 release];
+    [dot4 release];
+    [dot5 release];
+    [dot6 release];
+    [dot7 release];
+    [dot8 release];
+    [dot9 release];
+    [dot10 release];
+    [dot11 release];
+    [dot12 release];
+    [dot13 release];
+    [dot14 release];
+    [headerView release];
+    [dotsContainer release];
+    [loadingOverlayPortrait release];
     [super dealloc];
 }
 
@@ -212,12 +269,26 @@
 	if(UIInterfaceOrientationIsPortrait(orientation))
 	{
 		[landscapeView removeFromSuperview];
-		[self.view insertSubview:portraitView aboveSubview:backgroundView];
+		if (isLoading) {
+            [self.view addSubview:portraitView];
+            [loadingOverlayPortrait addSubview:dotsContainer];
+            dotsContainer.center = CGPointMake(384, 542);
+        }
+        else{
+            [self.view insertSubview:portraitView aboveSubview:backgroundView];
+        }
 	}
 	else 
 	{
 		[portraitView removeFromSuperview];
-		[self.view insertSubview:landscapeView aboveSubview:backgroundView];
+		if (isLoading) {
+            [self.view addSubview:landscapeView];
+            [loadingOverlayLandscape addSubview:dotsContainer];
+            dotsContainer.center = CGPointMake(512, 408);
+        }
+        else{
+            [self.view insertSubview:landscapeView aboveSubview:backgroundView];
+        }
 	}
     
 }
@@ -232,6 +303,30 @@
     NSURLConnection *connection = [NSURLConnection connectionWithRequest:request delegate:self];
     [connection start];
 }
+
+- (void) startLoadingAnimation
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        DLog(DEBUG_LEVEL_SOME, @"dotIndex %d", dotIndex);
+        UIView *dot = [self valueForKey:[NSString stringWithFormat:@"dot%d", dotIndex]];
+        dot.alpha = !dot.alpha;
+        
+    } completion:^(BOOL finished) {
+        
+        dotIndex++;
+        if (dotIndex > 14) {
+            dotIndex = 1;
+        }
+        
+        if (isLoading) {
+            [self startLoadingAnimation];
+        }
+        
+    }];
+
+}
+
 
 #pragma mark - Managing Media Items
 
@@ -469,9 +564,9 @@
     NSString *archiveName = [documentsDirectory stringByAppendingString:@"/media.archive"];
     NSFileManager *fm = [NSFileManager defaultManager];
     if([fm fileExistsAtPath:archiveName]){
-        NSArray *array = [NSKeyedUnarchiver unarchiveObjectWithFile:archiveName];
-        _mediaItems = [[NSMutableSet alloc] initWithCapacity:[array count]];
-        [_mediaItems addObjectsFromArray:array];
+        NSSet *set = [NSKeyedUnarchiver unarchiveObjectWithFile:archiveName];
+        _mediaItems = [[NSMutableSet alloc] initWithCapacity:[set count]];
+        [_mediaItems unionSet:set];
     }
 #endif
     else{
@@ -564,6 +659,15 @@
             DLog(DEBUG_LEVEL_VERBOSE, @"Finished updating content. Current number of media items: %d", [_mediaItems count]);
 
             [self populateScrollViews];
+            
+            isLoading = NO;
+            [UIView animateWithDuration:0.25 animations:^{
+                loadingOverlayPortrait.alpha = 0.0;
+                loadingOverlayLandscape.alpha = 0.0;
+            } completion:^(BOOL finished) {
+                [loadingOverlayPortrait removeFromSuperview];
+                [loadingOverlayLandscape removeFromSuperview];
+            }];
             
         }
             

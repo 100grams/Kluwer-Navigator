@@ -27,9 +27,17 @@ enum ConnectionState {
     ScrollViewCell *loadingCell;
     
     NSInteger connectionState;
+    NSInteger dotIndex;
+    BOOL isLoading;
 
 }
+@property (retain, nonatomic) IBOutlet UIView *loadingOverlayPortrait;
+@property (retain, nonatomic) IBOutlet UIView *loadingOverlayLandscape;
 @property (retain, nonatomic) IBOutlet UIView *backgroundView;
+@property (retain, nonatomic) IBOutlet UIView *headerView;
+
+
+
 @property (retain, nonatomic) IBOutlet UIView *bottomLabelContainer;
 @property (retain, nonatomic) IBOutlet UIView *topLabelContainer;
 @property (retain, nonatomic) IBOutlet UIView *midLabelContainer;
@@ -58,6 +66,25 @@ enum ConnectionState {
 @property (retain, nonatomic) IBOutlet UIView *portraitView;
 @property (retain, nonatomic) IBOutlet UIView *landscapeView;
 
+
+// loading dots
+@property (retain, nonatomic) IBOutlet UIImageView *dot1;
+@property (retain, nonatomic) IBOutlet UIImageView *dot2;
+@property (retain, nonatomic) IBOutlet UIImageView *dot3;
+@property (retain, nonatomic) IBOutlet UIImageView *dot4;
+@property (retain, nonatomic) IBOutlet UIImageView *dot5;
+@property (retain, nonatomic) IBOutlet UIImageView *dot6;
+@property (retain, nonatomic) IBOutlet UIImageView *dot7;
+@property (retain, nonatomic) IBOutlet UIImageView *dot8;
+@property (retain, nonatomic) IBOutlet UIImageView *dot9;
+@property (retain, nonatomic) IBOutlet UIImageView *dot10;
+
+@property (retain, nonatomic) IBOutlet UIImageView *dot11;
+@property (retain, nonatomic) IBOutlet UIImageView *dot12;
+@property (retain, nonatomic) IBOutlet UIImageView *dot13;
+@property (retain, nonatomic) IBOutlet UIImageView *dot14;
+
+@property (retain, nonatomic) IBOutlet UIView *dotsContainer;
 
 // Fetching content from the server
 - (void) getContentFeed;
