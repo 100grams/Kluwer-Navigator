@@ -24,3 +24,7 @@ kluwer_nav_design/kluwer_navigator_home_portrait.psd
 kluwer_nav_design/kluwer_navigator_home_landscape.psd
 
 kluwer_nav_design/kluwer_navigator_loading.psd
+
+Kluwer-Navigator/build/*
+
+Kluwer-Navigator/build/Kluwer-Navigator.ipa

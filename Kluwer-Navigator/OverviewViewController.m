@@ -132,7 +132,7 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 
-    self.viewOrientation = [UIDevice currentDevice].orientation;
+    self.viewOrientation = [UIApplication sharedApplication].statusBarOrientation;
 
 }
 
@@ -200,7 +200,7 @@
 
 - (void) setViewOrientation:(UIInterfaceOrientation)orientation
 {
-    if (viewOrientation == orientation || orientation == UIDeviceOrientationUnknown) {
+    if (viewOrientation == orientation) {
         return;
     }
     
