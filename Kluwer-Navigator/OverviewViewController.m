@@ -512,7 +512,7 @@
         return [[obj valueForKey:@"filetype"] isEqualToString:type];
     }];
     
-    return [itemsOfType sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:NO]]];
+    return [itemsOfType sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
 }
 
 - (NSInteger) displayIndexOfMediaItem:(NSDictionary*)item
