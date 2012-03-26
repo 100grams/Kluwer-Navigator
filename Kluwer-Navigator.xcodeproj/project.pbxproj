@@ -61,7 +61,6 @@
 /* Begin PBXFileReference section */
 		5E1DFCCA15209771005A839C /* loading_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_dot.png; sourceTree = "<group>"; };
 		5E1DFCCC1520A152005A839C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		5E1DFCD01520A56B005A839C /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
 		5E1DFCD21520A577005A839C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		5E4B0285150DEF44006D4C01 /* Kluwer-Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kluwer-Navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4B0289150DEF44006D4C01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -149,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				5E1DFCD21520A577005A839C /* Default-Portrait~ipad.png */,
-				5E1DFCD01520A56B005A839C /* Default-Landscape@2x~ipad.png */,
 				5E1DFCCC1520A152005A839C /* Default-Landscape~ipad.png */,
 				5E4B028F150DEF44006D4C01 /* Kluwer-Navigator */,
 				5E4B0288150DEF44006D4C01 /* Frameworks */,
