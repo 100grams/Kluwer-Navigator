@@ -243,9 +243,9 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if (viewOrientation == UIDeviceOrientationUnknown || self.modalViewController) {
-        self.viewOrientation = interfaceOrientation;
-    }
+//    if (viewOrientation == UIDeviceOrientationUnknown || self.modalViewController) {
+//        self.viewOrientation = interfaceOrientation;
+//    }
     return YES;
 }
 
@@ -660,15 +660,7 @@
 
             [self populateScrollViews];
             
-            isLoading = NO;
-            [UIView animateWithDuration:0.25 animations:^{
-                loadingOverlayPortrait.alpha = 0.0;
-                loadingOverlayLandscape.alpha = 0.0;
-            } completion:^(BOOL finished) {
-                [loadingOverlayPortrait removeFromSuperview];
-                [loadingOverlayLandscape removeFromSuperview];
-            }];
-            
+            [self dismissLoadingOverlay];
         }
             
             break;
@@ -703,6 +695,30 @@
     }
 }
 
+
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    DLog(DEBUG_LEVEL_ERROR, @"Connection FAILED: %@", error);
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:nil message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] autorelease];
+    [alert show];
+    
+    [self populateScrollViews];
+    [self dismissLoadingOverlay];
+}
+
+
+- (void) dismissLoadingOverlay
+{
+    isLoading = NO;
+    [UIView animateWithDuration:0.25 animations:^{
+        loadingOverlayPortrait.alpha = 0.0;
+        loadingOverlayLandscape.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        [loadingOverlayPortrait removeFromSuperview];
+        [loadingOverlayLandscape removeFromSuperview];
+    }];
+
+}
 
 
 #pragma mark - NSXMLParserDelegate
