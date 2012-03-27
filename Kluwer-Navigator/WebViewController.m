@@ -7,6 +7,7 @@
 //
 
 #import "WebViewController.h"
+#import "defines.h"
 
 @interface WebViewController ()
 
@@ -35,6 +36,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [webView loadRequest:request];
     [self.view addSubview:webView];
+    
+    webView.scalesPageToFit = YES;
    
 }
 
@@ -49,6 +52,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+
+- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    DLog(DEBUG_LEVEL_VERBOSE, @"did rotate %@", NSStringFromCGRect(self.webView.frame));
+    
 }
 
 - (void)dealloc {
