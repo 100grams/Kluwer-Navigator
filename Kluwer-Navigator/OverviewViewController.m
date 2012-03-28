@@ -171,7 +171,14 @@
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
 
-    self.viewOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (self.viewOrientation != [UIApplication sharedApplication].statusBarOrientation) {
+        self.viewOrientation = [UIApplication sharedApplication].statusBarOrientation;
+    }
+    
+    if (!isLoading) {
+        [loadingOverlayPortrait removeFromSuperview];
+        [loadingOverlayLandscape removeFromSuperview];
+    }
 
 }
 
