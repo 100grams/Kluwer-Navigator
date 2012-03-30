@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 #import "OverviewViewController.h"
+#import <comScore/CSComScore.h>
 
 @implementation AppDelegate
 
@@ -33,6 +34,16 @@
     navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
     [navigationController.navigationBar setBarStyle:UIBarStyleBlackTranslucent]; 
     navigationController.navigationBarHidden = YES; 
+    
+    // setup comscore
+    [[CSComScore comScore] setSalt:@"b5e95cf21f7e00eb6b3f055323edd7e7"];
+    [[CSComScore comScore] setPixelURL:@"http://nl.sitestat.com/kluwer/navpromo-app/s?"];
+    
+    // report comscore app start
+    NSString *appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Bundle version"];
+    NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:appVersion, @"version", nil];
+    [[CSComScore comScore] notifyWithApplicationEventType:Start andLabels:dict];
+    
     
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];

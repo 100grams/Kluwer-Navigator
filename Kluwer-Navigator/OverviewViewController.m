@@ -13,6 +13,7 @@
 #import "AboutViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import "WebViewController.h"
+#import <comScore/CSComScore.h> 
 
 @implementation OverviewViewController
 @synthesize dot1;
@@ -858,6 +859,8 @@
         [previewController release];
     }
     
+    // report comscore page view 
+    [[CSComScore comScore] notifyWithPixelURL:@"Preview" eventType:View andLabels:previewedMediaItem];
 }
 
 

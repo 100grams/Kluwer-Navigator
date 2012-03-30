@@ -10,6 +10,8 @@
 		5E1DFCCB15209771005A839C /* loading_dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1DFCCA15209771005A839C /* loading_dot.png */; };
 		5E1DFCCD1520A152005A839C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1DFCCC1520A152005A839C /* Default-Landscape~ipad.png */; };
 		5E1DFCD31520A577005A839C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E1DFCD21520A577005A839C /* Default-Portrait~ipad.png */; };
+		5E446657152396F5009C183E /* comScore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E446656152396F5009C183E /* comScore.framework */; };
+		5E44665A1523972F009C183E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4466591523972F009C183E /* SystemConfiguration.framework */; };
 		5E4B028A150DEF44006D4C01 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4B0289150DEF44006D4C01 /* UIKit.framework */; };
 		5E4B028C150DEF44006D4C01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4B028B150DEF44006D4C01 /* Foundation.framework */; };
 		5E4B028E150DEF44006D4C01 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E4B028D150DEF44006D4C01 /* CoreGraphics.framework */; };
@@ -62,6 +64,8 @@
 		5E1DFCCA15209771005A839C /* loading_dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loading_dot.png; sourceTree = "<group>"; };
 		5E1DFCCC1520A152005A839C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		5E1DFCD21520A577005A839C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		5E446656152396F5009C183E /* comScore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = comScore.framework; sourceTree = "<group>"; };
+		5E4466591523972F009C183E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5E4B0285150DEF44006D4C01 /* Kluwer-Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kluwer-Navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4B0289150DEF44006D4C01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E4B028B150DEF44006D4C01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -132,12 +136,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E44665A1523972F009C183E /* SystemConfiguration.framework in Frameworks */,
 				5E5A6CAE15123D69000F5C06 /* QuickLook.framework in Frameworks */,
 				5E5A6CA515123679000F5C06 /* MediaPlayer.framework in Frameworks */,
 				5E4B02E4150E151C006D4C01 /* QuartzCore.framework in Frameworks */,
 				5E4B028A150DEF44006D4C01 /* UIKit.framework in Frameworks */,
 				5E4B028C150DEF44006D4C01 /* Foundation.framework in Frameworks */,
 				5E4B028E150DEF44006D4C01 /* CoreGraphics.framework in Frameworks */,
+				5E446657152396F5009C183E /* comScore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +172,8 @@
 		5E4B0288150DEF44006D4C01 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E4466591523972F009C183E /* SystemConfiguration.framework */,
+				5E446656152396F5009C183E /* comScore.framework */,
 				5E5A6CAD15123D69000F5C06 /* QuickLook.framework */,
 				5E5A6CA415123679000F5C06 /* MediaPlayer.framework */,
 				5E4B02E3150E151C006D4C01 /* QuartzCore.framework */,
@@ -507,6 +515,10 @@
 		5E4B02A4150DEF44006D4C01 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kluwer-Navigator/Kluwer-Navigator-Prefix.pch";
 				INFOPLIST_FILE = "Kluwer-Navigator/Kluwer-Navigator-Info.plist";
@@ -519,6 +531,10 @@
 		5E4B02A5150DEF44006D4C01 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Kluwer-Navigator/Kluwer-Navigator-Prefix.pch";
 				INFOPLIST_FILE = "Kluwer-Navigator/Kluwer-Navigator-Info.plist";
