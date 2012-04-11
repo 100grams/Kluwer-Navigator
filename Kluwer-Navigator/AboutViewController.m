@@ -19,6 +19,8 @@
 @synthesize backgroundView;
 @synthesize textView;
 @synthesize contactDetailsLabel;
+@synthesize portraitView;
+@synthesize landscapeView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,11 +40,25 @@
    
     // set background view gradient
     
-    CAGradientLayer *glayer = (CAGradientLayer*)backgroundView.layer;
+    CAGradientLayer *glayer = (CAGradientLayer*)self.view.layer;
     UIColor *topColor = [UIColor colorWithRed:245.0/255 green:245.0/255 blue:245.0/255 alpha:1.0];
     UIColor *bottomColor = [UIColor colorWithRed:216.0/255 green:216.0/255 blue:216.0/255 alpha:1.0];//UIColorFromRGBString(@"0b7ad0");
     glayer.colors = [NSArray arrayWithObjects:(id)[topColor CGColor], (id)[bottomColor CGColor], nil];
 
+    [self updateLayoutForViewOrientation];
+}
+
+
+- (void) updateLayoutForViewOrientation
+{
+    if (UIInterfaceOrientationIsPortrait([UIApplication sharedApplication].statusBarOrientation)) {
+        [self.landscapeView removeFromSuperview];
+        [self.view addSubview:portraitView];
+    }
+    else{
+        [self.portraitView removeFromSuperview];
+        [self.view addSubview:landscapeView];
+    }
 }
 
 - (void)viewDidUnload
@@ -50,6 +66,8 @@
     [self setBackgroundView:nil];
     [self setTextView:nil];
     [self setContactDetailsLabel:nil];
+    [self setPortraitView:nil];
+    [self setLandscapeView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -69,10 +87,18 @@
 	return YES;
 }
 
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [self updateLayoutForViewOrientation];
+}
+
+
 - (void)dealloc {
     [backgroundView release];
     [textView release];
     [contactDetailsLabel release];
+    [portraitView release];
+    [landscapeView release];
     [super dealloc];
 }
 @end
