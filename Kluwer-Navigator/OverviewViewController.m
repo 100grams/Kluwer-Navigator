@@ -830,6 +830,7 @@
 
 - (void) previewMediaItem : (NSDictionary*) mediaItem 
 {
+    
     if ([[mediaItem valueForKey:@"filetype"] isEqualToString:@"video"]) {
         
         WebViewController *controller = [[[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil] autorelease];
@@ -861,7 +862,8 @@
     }
     
     // report comscore page view 
-    [[CSComScore comScore] notifyWithPixelURL:@"Preview" eventType:View andLabels:previewedMediaItem];
+    NSString *eventName = [NSString stringWithFormat:@"View %@: %@", [mediaItem valueForKey:@"filetype"], [mediaItem valueForKey:@"title"]]; 
+    [[CSComScore comScore] notifyWithPixelURL:eventName eventType:View andLabels:previewedMediaItem];
 }
 
 
