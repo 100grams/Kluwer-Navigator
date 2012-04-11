@@ -724,6 +724,7 @@
     } completion:^(BOOL finished) {
         [loadingOverlayPortrait removeFromSuperview];
         [loadingOverlayLandscape removeFromSuperview];
+        [self.view bringSubviewToFront:headerView];
     }];
 
 }

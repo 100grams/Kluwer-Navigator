@@ -35,6 +35,7 @@
 
     self.title = NSLocalizedStringWithDefaultValue(@"AboutNavTitle", nil, [NSBundle mainBundle], @"Over Kluwer Navigator", nil);
     
+   
     // set background view gradient
     
     CAGradientLayer *glayer = (CAGradientLayer*)backgroundView.layer;
