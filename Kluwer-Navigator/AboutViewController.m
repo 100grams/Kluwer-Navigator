@@ -21,6 +21,8 @@
 @synthesize contactDetailsLabel;
 @synthesize portraitView;
 @synthesize landscapeView;
+@synthesize portraitContactTextView;
+@synthesize landscapeContactTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,6 +70,8 @@
     [self setContactDetailsLabel:nil];
     [self setPortraitView:nil];
     [self setLandscapeView:nil];
+    [self setPortraitContactTextView:nil];
+    [self setLandscapeContactTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -99,6 +103,8 @@
     [contactDetailsLabel release];
     [portraitView release];
     [landscapeView release];
+    [portraitContactTextView release];
+    [landscapeContactTextView release];
     [super dealloc];
 }
 @end
