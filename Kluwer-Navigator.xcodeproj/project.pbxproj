@@ -58,6 +58,8 @@
 		5EF6CA32151B752100C2BCBB /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6CA30151B752100C2BCBB /* WebViewController.m */; };
 		5EF6CA33151B752100C2BCBB /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5EF6CA31151B752100C2BCBB /* WebViewController.xib */; };
 		5EF6CA54151B7E7800C2BCBB /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6CA53151B7E7800C2BCBB /* HitTestView.m */; };
+		5EF9963C1540772C00A4AA45 /* video-load-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF9963B1540772C00A4AA45 /* video-load-portrait.png */; };
+		5EF9963F1540774100A4AA45 /* video-load-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF9963E1540774100A4AA45 /* video-load-landscape.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,7 +68,7 @@
 		5E1DFCD21520A577005A839C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		5E446656152396F5009C183E /* comScore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = comScore.framework; sourceTree = "<group>"; };
 		5E4466591523972F009C183E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		5E4B0285150DEF44006D4C01 /* Kluwer-Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kluwer-Navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E4B0285150DEF44006D4C01 /* Kluwer Navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kluwer Navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E4B0289150DEF44006D4C01 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5E4B028B150DEF44006D4C01 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E4B028D150DEF44006D4C01 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,8 @@
 		5EF6CA31151B752100C2BCBB /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		5EF6CA52151B7E7800C2BCBB /* HitTestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestView.h; sourceTree = "<group>"; };
 		5EF6CA53151B7E7800C2BCBB /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
+		5EF9963B1540772C00A4AA45 /* video-load-portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-load-portrait.png"; sourceTree = "<group>"; };
+		5EF9963E1540774100A4AA45 /* video-load-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-load-landscape.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,7 +168,7 @@
 		5E4B0286150DEF44006D4C01 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5E4B0285150DEF44006D4C01 /* Kluwer-Navigator.app */,
+				5E4B0285150DEF44006D4C01 /* Kluwer Navigator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				5E1DFCCA15209771005A839C /* loading_dot.png */,
+				5EF9963E1540774100A4AA45 /* video-load-landscape.png */,
+				5EF9963B1540772C00A4AA45 /* video-load-portrait.png */,
 				5EDAB3E71510D7A500734C26 /* bg-scroll-narrow-landscape.png */,
 				5EDAB3E81510D7A500734C26 /* bg.png */,
 				5EDAB3E91510D7A500734C26 /* bg_scroll-wide_landscape.png */,
@@ -355,7 +361,7 @@
 			);
 			name = "Kluwer-Navigator";
 			productName = "Kluwer-Navigator";
-			productReference = 5E4B0285150DEF44006D4C01 /* Kluwer-Navigator.app */;
+			productReference = 5E4B0285150DEF44006D4C01 /* Kluwer Navigator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -418,6 +424,8 @@
 				5E1DFCCB15209771005A839C /* loading_dot.png in Resources */,
 				5E1DFCCD1520A152005A839C /* Default-Landscape~ipad.png in Resources */,
 				5E1DFCD31520A577005A839C /* Default-Portrait~ipad.png in Resources */,
+				5EF9963C1540772C00A4AA45 /* video-load-portrait.png in Resources */,
+				5EF9963F1540774100A4AA45 /* video-load-landscape.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +531,7 @@
 				GCC_PREFIX_HEADER = "Kluwer-Navigator/Kluwer-Navigator-Prefix.pch";
 				INFOPLIST_FILE = "Kluwer-Navigator/Kluwer-Navigator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Kluwer Navigator";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -539,7 +547,7 @@
 				GCC_PREFIX_HEADER = "Kluwer-Navigator/Kluwer-Navigator-Prefix.pch";
 				INFOPLIST_FILE = "Kluwer-Navigator/Kluwer-Navigator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Kluwer Navigator";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

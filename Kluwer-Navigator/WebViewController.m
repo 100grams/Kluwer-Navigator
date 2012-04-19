@@ -16,6 +16,7 @@
 @implementation WebViewController
 @synthesize webView;
 @synthesize url;
+@synthesize backgroundImageView;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -32,22 +33,25 @@
     [super viewDidLoad];
 
     ((HitTestView*)self.view).delegate = self;
-    
+
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
     [webView loadRequest:request];
-    [self.view addSubview:webView];
     
     webView.scalesPageToFit = YES;
-       
+    
+    [self updateLoadingImageForOrientation : [UIApplication sharedApplication].statusBarOrientation];
+
 }
 
 - (void)viewDidUnload
 {
-    [self setWebView:nil];
+    [self setWebView:nil];		
+    [self setBackgroundImageView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -55,16 +59,27 @@
 }
 
 
-- (void) didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+- (void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
-    DLog(DEBUG_LEVEL_VERBOSE, @"did rotate %@", NSStringFromCGRect(self.webView.frame));
-    
+    [self updateLoadingImageForOrientation:toInterfaceOrientation];
 }
+
+- (void) updateLoadingImageForOrientation : (UIInterfaceOrientation) orientation
+{
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        backgroundImageView.image = [UIImage imageNamed:@"video-load-portrait"];
+    }
+    else{
+        backgroundImageView.image = [UIImage imageNamed:@"video-load-landscape"];            
+    }
+}
+
 
 - (void)dealloc {
     [webView release];
     self.url = nil;
     
+    [backgroundImageView release];
     [super dealloc];
 }
 
@@ -74,6 +89,26 @@
     self.navigationController.navigationBarHidden = !self.navigationController.navigationBarHidden;
 }
 
+
+- (void) webViewDidFinishLoad:(UIWebView *)webView
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        backgroundImageView.alpha = 0.0;
+    }];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView;
+{
+    
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        backgroundImageView.alpha = 0.0;
+    }];
+    
+}
 
 
 @end

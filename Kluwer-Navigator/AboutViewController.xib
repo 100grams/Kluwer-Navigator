@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="8.00">
 	<data>
-		<int key="IBDocument.SystemTarget">1296</int>
+		<int key="IBDocument.SystemTarget">1280</int>
 		<string key="IBDocument.SystemVersion">11D50</string>
 		<string key="IBDocument.InterfaceBuilderVersion">2182</string>
 		<string key="IBDocument.AppKitVersion">1138.32</string>
@@ -39,7 +39,6 @@
 				<string key="NSFrame">{{0, 20}, {768, 1004}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
@@ -392,7 +391,6 @@ bWV0IGRlIG5pZXV3ZSBLbHV3ZXIgTmF2aWdhdG9yIChiZXNjaGlrYmFhciBpbiBkZSB6b21lcik</byt
 								<string key="NSFrame">{{71, 872}, {9, 8}}</string>
 								<reference key="NSSuperview" ref="129367116"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<int key="IBUIContentMode">4</int>
@@ -416,8 +414,8 @@ bWV0IGRlIG5pZXV3ZSBLbHV3ZXIgTmF2aWdhdG9yIChiZXNjaGlrYmFhciBpbiBkZSB6b21lcik</byt
 								<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 								<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 								<bool key="IBUIEditable">NO</bool>
-								<string type="base64-UTF8" key="IBUIText">T25saW5lIG9wIGh0dHA6Ly9uYXZpZ3RvcmhlbHAua2x1d2VyLm5sL2NvbnRhY3QKDVdpbHQgdSBjb250
-YWN0IG1ldCBlZW4gYWNjb3VudG1hbmFnZXIsIGJlbCBvbnMgZGFuIG9wIDA1NzAgLSA2NzMgNTkxLiA</string>
+								<string type="base64-UTF8" key="IBUIText">T25saW5lIG9wIHd3dy5rbHV3ZXJuYXZpZ2F0b3IubmwKDVdpbHQgdSBjb250YWN0IG1ldCBlZW4gYWNj
+b3VudG1hbmFnZXIsIGJlbCBvbnMgZGFuIG9wIDA1NzAgLSA2NzMgNTkxLiA</string>
 								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 									<int key="IBUIAutocapitalizationType">2</int>
 									<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -770,7 +768,6 @@ bWV0IGRlIG5pZXV3ZSBLbHV3ZXIgTmF2aWdhdG9yIChiZXNjaGlrYmFhciBpbiBkZSB6b21lcik</str
 						<string key="NSFrame">{{95, 628}, {872, 74}}</string>
 						<reference key="NSSuperview" ref="546919061"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="509408166"/>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -778,8 +775,8 @@ bWV0IGRlIG5pZXV3ZSBLbHV3ZXIgTmF2aWdhdG9yIChiZXNjaGlrYmFhciBpbiBkZSB6b21lcik</str
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
 						<bool key="IBUIShowsHorizontalScrollIndicator">NO</bool>
 						<bool key="IBUIEditable">NO</bool>
-						<string type="base64-UTF8" key="IBUIText">T25saW5lIG9wIGh0dHA6Ly9uYXZpZ3RvcmhlbHAua2x1d2VyLm5sL2NvbnRhY3QKDVdpbHQgdSBjb250
-YWN0IG1ldCBlZW4gYWNjb3VudG1hbmFnZXIsIGJlbCBvbnMgZGFuIG9wIDA1NzAgLSA2NzMgNTkxLiA</string>
+						<string type="base64-UTF8" key="IBUIText">T25saW5lIG9wIHd3dy5rbHV3ZXJuYXZpZ2F0b3IubmwKDVdpbHQgdSBjb250YWN0IG1ldCBlZW4gYWNj
+b3VudG1hbmFnZXIsIGJlbCBvbnMgZGFuIG9wIDA1NzAgLSA2NzMgNTkxLiA</string>
 						<object class="IBUITextInputTraits" key="IBUITextInputTraits">
 							<int key="IBUIAutocapitalizationType">2</int>
 							<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -1232,10 +1229,6 @@ YWN0IG1ldCBlZW4gYWNjb3VudG1hbmFnZXIsIGJlbCBvbnMgZGFuIG9wIDA1NzAgLSA2NzMgNTkxLiA<
 		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBIPadFramework</string>
-		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
-			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
-			<real value="1296" key="NS.object.0"/>
-		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">

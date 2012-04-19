@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "HitTestView.h"
 
-@interface WebViewController : UIViewController <UIGestureRecognizerDelegate, HitTestViewDelegate>
+@interface WebViewController : UIViewController <UIGestureRecognizerDelegate, HitTestViewDelegate, UIWebViewDelegate>
 
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 @property (retain, nonatomic) NSString *url; 
+@property (retain, nonatomic) IBOutlet UIImageView *backgroundImageView;
 
 @end
