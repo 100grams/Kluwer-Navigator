@@ -60,6 +60,7 @@
 		5EF6CA54151B7E7800C2BCBB /* HitTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF6CA53151B7E7800C2BCBB /* HitTestView.m */; };
 		5EF9963C1540772C00A4AA45 /* video-load-portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF9963B1540772C00A4AA45 /* video-load-portrait.png */; };
 		5EF9963F1540774100A4AA45 /* video-load-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 5EF9963E1540774100A4AA45 /* video-load-landscape.png */; };
+		5EF9969B1542D7B300A4AA45 /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EF9969A1542D7B300A4AA45 /* NSString+URLEncoding.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,8 @@
 		5EF6CA53151B7E7800C2BCBB /* HitTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HitTestView.m; sourceTree = "<group>"; };
 		5EF9963B1540772C00A4AA45 /* video-load-portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-load-portrait.png"; sourceTree = "<group>"; };
 		5EF9963E1540774100A4AA45 /* video-load-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "video-load-landscape.png"; sourceTree = "<group>"; };
+		5EF996991542D7B300A4AA45 /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		5EF9969A1542D7B300A4AA45 /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +274,8 @@
 				5E4B02B5150DFC98006D4C01 /* EGOImageView */,
 				5ED24C661519E99500A5E521 /* MBProgressHUD.h */,
 				5ED24C671519E99500A5E521 /* MBProgressHUD.m */,
+				5EF996991542D7B300A4AA45 /* NSString+URLEncoding.h */,
+				5EF9969A1542D7B300A4AA45 /* NSString+URLEncoding.m */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -450,6 +455,7 @@
 				5EDAB46B15120A8600734C26 /* ReflectionView.m in Sources */,
 				5EF6CA32151B752100C2BCBB /* WebViewController.m in Sources */,
 				5EF6CA54151B7E7800C2BCBB /* HitTestView.m in Sources */,
+				5EF9969B1542D7B300A4AA45 /* NSString+URLEncoding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

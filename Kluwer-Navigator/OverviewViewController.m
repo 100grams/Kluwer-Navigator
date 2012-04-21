@@ -14,6 +14,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "WebViewController.h"
 #import <comScore/CSComScore.h> 
+#import "NSString+URLEncoding.h"
 
 @implementation OverviewViewController
 @synthesize dot1;
@@ -862,8 +863,10 @@
     }
     
     // report comscore page view 
-    NSString *eventName = [NSString stringWithFormat:@"View %@: %@", [mediaItem valueForKey:@"filetype"], [mediaItem valueForKey:@"title"]]; 
-    [[CSComScore comScore] notifyWithPixelURL:eventName eventType:View andLabels:previewedMediaItem];
+    NSString *eventName = [NSString stringWithFormat:@"%@ %@", [mediaItem valueForKey:@"filetype"], [mediaItem valueForKey:@"title"]];
+    NSString *urlEventName = [eventName urlEncodeUsingEncoding:NSUTF8StringEncoding];
+    NSString *pixelUrl = [kComScoreBasePixelURL stringByAppendingString:urlEventName];
+    [[CSComScore comScore] notifyWithPixelURL:pixelUrl eventType:View andLabels:previewedMediaItem];
 }
 
 

@@ -10,6 +10,8 @@
 
 #import "OverviewViewController.h"
 #import <comScore/CSComScore.h>
+#import "defines.h"
+
 
 @implementation AppDelegate
 
@@ -37,7 +39,7 @@
     
     // setup comscore
     [[CSComScore comScore] setSalt:@"b5e95cf21f7e00eb6b3f055323edd7e7"];
-    [[CSComScore comScore] setPixelURL:@"http://nl.sitestat.com/kluwer/navpromo-app/s?"];
+    [[CSComScore comScore] setPixelURL:kComScoreBasePixelURL];
     
     // report comscore app start
     NSString *appVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"Bundle version"];

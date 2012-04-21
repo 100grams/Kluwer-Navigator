@@ -13,7 +13,7 @@
 // URLs
 
 #define kCreatieUrl @"http://www.creatie.nl/creatie/xml/ipad/files.do"
-
+#define kComScoreBasePixelURL @"http://nl.sitestat.com/kluwer/navpromo-app/s?"
 
 //debug 
 #define DBG_LEVEL DEBUG_LEVEL_VERBOSE
