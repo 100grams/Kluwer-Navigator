@@ -11,8 +11,8 @@
 
 
 // URLs
-
-#define kCreatieUrl @"http://www.creatie.nl/creatie/xml/ipad/files.do"
+#define kCreatieUrl @"http://promoapp.kluwer.nl/web/guest/home?p_p_id=56_INSTANCE_7ve4uluk0ryW&p_p_state=exclusive"
+//#define kCreatieUrl @"http://www.creatie.nl/creatie/xml/ipad/files.do"
 #define kComScoreBasePixelURL @"http://nl.sitestat.com/kluwer/navpromo-app/s?"
 
 //debug 
