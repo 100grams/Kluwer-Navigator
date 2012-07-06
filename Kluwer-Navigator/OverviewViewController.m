@@ -616,7 +616,7 @@
         return [[obj valueForKey:@"filetype"] isEqualToString:type];
     }];
     
-    return [itemsOfType sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"id" ascending:YES]]];
+    return [itemsOfType sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"displaydate" ascending:YES]]];
 }
 
 - (NSInteger) displayIndexOfMediaItem:(NSDictionary*)item
