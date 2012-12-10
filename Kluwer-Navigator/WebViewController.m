@@ -104,6 +104,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error;
 {
+    DLog(DEBUG_LEVEL_ERROR, @"webView didFaileLoadWithError: %@", error);
     [UIView animateWithDuration:0.25 animations:^{
         backgroundImageView.alpha = 0.0;
     }];
